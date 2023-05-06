@@ -34,13 +34,12 @@ export default function Suggestions() {
                 <div>Ver tudo</div>
             </div>
 
-            {sugestoes.map( (sgt) => <Suggestion userImg={sgt.img} user={sgt.user} txt={sgt.segue} />  )}
+            {sugestoes.map( (sgt, i) => <Suggestion key={i} userImg={sgt.img} user={sgt.user} txt={sgt.segue} />  )}
 
         </div>
     );
 }
 
-// userImg='assets/img/adorable_animals.svg' user='adorable_animals' txt='Segue você'
 function Suggestion(sug) {
     return (
         <div class="sugestao">
